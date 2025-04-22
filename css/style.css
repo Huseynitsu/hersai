@@ -105,7 +105,8 @@ header nav>ul a,
     font-size: 22px;
 }
 
-header nav>ul a:hover {
+header nav>ul a:hover,
+.second-header nav>ul a:hover {
     color: var(--tc-theme-primary);
 }
 
@@ -691,7 +692,7 @@ li.open_drop>ul a:hover img {
     left: 40px;
     bottom: 100px;
     z-index: -1;
-    border: 2px solid #d7a449;
+    border: 2px solid var(--tc-theme-primary);
 }
 
 .about-section .image-column .inner-column .image {
@@ -721,6 +722,8 @@ li.open_drop>ul a:hover img {
     left: 15px;
     bottom: 15px;
     background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px #fff;
 }
 
 .about-section .image-column .inner-column .image .overlay-box .year-box {
@@ -731,7 +734,7 @@ li.open_drop>ul a:hover img {
     line-height: 1.4em;
     /* padding-left: 125px; */
     display: flex;
-    padding: 15px 30px;
+    padding: 25px 40px;
     gap: 20px;
 }
 
@@ -741,7 +744,7 @@ li.open_drop>ul a:hover img {
     top: 0px;
     /* width: 90px;
     height: 90px; */
-    color: #d7a449;
+    color: var(--tc-theme-primary);
     font-size: 60px;
     font-weight: 700;
     /* line-height: 105px; */
@@ -768,7 +771,7 @@ li.open_drop>ul a:hover img {
 
 .about-section .btn-style-three:hover {
     color: #ffffff;
-    background: #d7a449;
+    background: var(--tc-theme-primary);
 }
 
 .about-section .btn-style-three {
@@ -782,7 +785,7 @@ li.open_drop>ul a:hover img {
     padding: 11px 40px;
     background-color: #ffffff;
     text-transform: capitalize;
-    border: 2px solid #d7a449;
+    border: 2px solid var(--tc-theme-primary);
     letter-spacing: 1.5px;
     transition: .5s all ease;
 }
@@ -798,13 +801,19 @@ li.open_drop>ul a:hover img {
 
 .sec-title .title {
     position: relative;
-    color: #d7a449;
-    font-size: 25px;
+    color: var(--tc-theme-primary);
+    font-size: 37px;
     font-weight: 700;
     padding-right: 50px;
     margin-bottom: 15px;
-    display: inline-block;
+    display: inline-flex;
     text-transform: capitalize;
+    gap: 8px;
+    align-items: center;
+}   
+
+.sec-title .title img {
+    height: 40px;
 }
 
 .sec-title .title:before {
