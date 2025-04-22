@@ -832,15 +832,21 @@ h2.sec_title {
     font-size: 60px;
 }
 
+h2.sec_title ~ p {
+    font-family: "Montserrat";
+    font-size: 14px;
+}
+
 .service-card {
     transition: all 0.3s ease;
     border-radius: 15px;
     background: #fff;
+    cursor: pointer;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.325);
 }
 
 .service-card h5 {
