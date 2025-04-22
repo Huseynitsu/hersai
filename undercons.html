@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hersai Studio - Tezliklə</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --orange: #FE4901;
+            --black: #0d0d0d;
+            --white: #ffffff;
+        }
+
+        @font-face {
+            font-family: 'RetroByte';
+            src: url('/font/RetroByte.woff2') format('woff2'),
+                url('/font/RetroByte.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Stepalange';
+            src: url('/font/StepalangeRegular.woff2') format('woff2'),
+                url('/font/StepalangeRegular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--black);
+            position: relative;
+            font-family: 'VT323', monospace;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            background: url(/img/basatarxaplan.gif)center/cover no-repeat;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: #0d0d0d88;
+            z-index: -1;
+        }
+
+        .logo {
+            max-width: 180px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: var(--orange);
+            text-shadow: 0 0 3px var(--orange);
+            margin-bottom: 10px;
+            font-family: "Stepalange";
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .construction-box {
+            border: 2px dashed var(--orange);
+            padding: 30px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.02);
+            box-shadow: 0 0 20px rgba(254, 73, 1, 0.3);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .footer span {
+            color: var(--orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🧡 LOGO yeri (öz logonuzun yolunu bu hissəyə əlavə edin) -->
+    <img src="/img/435013251_410186438396090_352749116618561699_n-removebg-preview.png" alt="Hersai Studio Logo"
+        class="logo" />
+
+    <div class="construction-box">
+        <h1>Hersai Studio</h1>
+        <p>Vebsaytımız hazırda yenilənir. Tezliklə yenidən onlayn olacağıq. Bu müddət ərzində bizi sosial şəbəkələrdə
+            izləyin!</p>
+    </div>
+
+    <div class="footer">
+        © <span>Hersai Studio</span> 2025. Bütün hüquqlar qorunur.
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'RetroByte';
+    src: url('/font/RetroByte.woff2') format('woff2'),
+        url('/font/RetroByte.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stepalange';
+    src: url('/font/StepalangeRegular.woff2') format('woff2'),
+        url('/font/StepalangeRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
