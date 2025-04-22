@@ -17,7 +17,7 @@ $(document).ready(function () {
       onlyInViewport: true,
     },
     scrollbar: {
-      el: ".swiper-scrollbar", 
+      el: ".swiper-scrollbar",
       hide: false,
       draggable: true,
     },
@@ -89,29 +89,29 @@ $(document).ready(function () {
   });
 });
 
-const header = document.querySelector("header");
-const scrollContainer = document.querySelector(".scroll-container");
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("header");
+  const secondSection = document.querySelector(".about-section");
 
-const checkTransform = () => {
-  // scrollContainer-in transform dəyərini alırıq
-  const transformValue = window.getComputedStyle(scrollContainer).transform;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          header.classList.add("scrolled");
+        } else {
+          // Only remove if we're going back to first section
+          if (window.scrollY < window.innerHeight) {
+            header.classList.remove("scrolled");
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.1, // Trigger when 10% of section is visible
+    }
+  );
 
-  if (transformValue === "none") return; // transform yoxdursa, heç bir dəyişiklik etmə
-
-  const matrix = new DOMMatrix(transformValue);
-  const translateY = matrix.m42;
-
-  // -100% və ya daha azsa headera class əlavə edirik
-  const scrollContainerHeight = scrollContainer.offsetHeight;
-  const threshold = -scrollContainerHeight;
-
-  if (translateY <= threshold) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
+  if (secondSection) {
+    observer.observe(secondSection);
   }
- 
-};
-
-// Yalnız transform dəyərini yoxlamaq üçün başlatma
-checkTransform();
+});
