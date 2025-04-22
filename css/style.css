@@ -729,7 +729,7 @@ li.open_drop>ul a:hover img {
 .about-section .image-column .inner-column .image .overlay-box .year-box {
     position: relative;
     color: #000;
-    font-size: 24px;
+    font-size: 31px;
     font-weight: 700;
     line-height: 1.4em;
     /* padding-left: 125px; */
@@ -810,7 +810,7 @@ li.open_drop>ul a:hover img {
     text-transform: capitalize;
     gap: 8px;
     align-items: center;
-}   
+}
 
 .sec-title .title img {
     height: 40px;
@@ -824,6 +824,32 @@ li.open_drop>ul a:hover img {
     width: 40px;
     height: 1px;
     background-color: #bbbbbb;
+}
+
+/* xidmetler */
+
+h2.sec_title {
+    font-size: 60px;
+}
+
+.service-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h5 {
+    font-size: 35px;
+}
+
+.service-card p {
+    font-size: 14px;
+    font-family: 'Montserrat';
 }
 
 /* responsiv */
