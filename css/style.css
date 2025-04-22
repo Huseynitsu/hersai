@@ -37,7 +37,40 @@ header {
     padding-left: 1rem;
 }
 
-header nav>ul {
+.header {
+    transition: transform 0.4s ease;
+}
+
+.header.hide {
+    transform: translateY(-100%);
+}
+
+.second-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 190;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+    padding: 1rem 2rem;
+}
+
+.second-header.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.second-header {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+header nav>ul,
+.second-header nav>ul {
     display: flex;
     gap: 1rem;
     margin: 0;
@@ -48,7 +81,8 @@ header nav>ul {
     border: 1px solid var(--tc-theme-primary);
 }
 
-header nav>ul a {
+header nav>ul a,
+.second-header nav> ul a {
     color: #fff;
     position: relative;
     padding: 0 1rem;
@@ -58,11 +92,16 @@ header nav>ul a {
     display: inline-block;
 }
 
+.second-header nav> ul a {
+    color: #000;
+}
+
 header nav>ul a:hover {
     color: var(--tc-theme-primary);
 }
 
-header nav>ul li:not(:last-child) a::after {
+header nav>ul li:not(:last-child) a::after,
+.second-header nav>ul li:not(:last-child) a::after {
     content: "\f64d";
     font-family: bootstrap-icons !important;
     position: absolute;
@@ -78,7 +117,8 @@ header nav>ul li:not(:last-child) a::after {
     opacity: 30%;
 }
 
-header nav>ul li.open_drop ul a::after {
+header nav>ul li.open_drop ul a::after,
+.second-header nav>ul li.open_drop ul a::after {
     display: none;
 }
 
@@ -127,8 +167,16 @@ li.open_drop ul a {
     font-size: 30px;
 }
 
+.second-header .navbar_right ul li.open_drop>a {
+    color: #000;
+}
+
 .navbar_right ul li.open_drop img {
     filter: invert(1);
+}
+
+.second-header .navbar_right ul li.open_drop img {
+    filter: none;
 }
 
 li.open_drop>ul {

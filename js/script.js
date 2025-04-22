@@ -92,16 +92,19 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("header");
   const secondSection = document.querySelector(".about-section");
+  const secondHeader = document.querySelector(".second-header");
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          header.classList.add("scrolled");
+          header.classList.add("hide");
+          secondHeader.classList.add("show");
         } else {
           // Only remove if we're going back to first section
           if (window.scrollY < window.innerHeight) {
-            header.classList.remove("scrolled");
+            header.classList.remove("hide");
+            secondHeader.classList.remove("show");
           }
         }
       });
