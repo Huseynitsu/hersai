@@ -22,13 +22,8 @@
         integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/css/full-page-scroll.css">
+    <!-- <link rel="stylesheet" href="/css/full-page-scroll.css"> -->
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        section {
-            height: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -104,70 +99,73 @@
         </div>
     </header>
     <div class="second-header" role="navigation" aria-label="Fixed navigation">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <img src="/img/hersailogo.png" alt="">
-            </div>
-            <nav>
-                <ul>
-                    <li class="open_drop">
-                        <a href="#">Haqqımızda</a>
-                        <ul>
-                            <li><a href="#">Hədəfimiz</a></li>
-                            <li><a href="#">Vizyonumuz</a></li>
-                        </ul>
-                    </li>
-                    <li class="open_drop">
-                        <a href="#">Xidmətlər</a>
-                        <ul>
-                            <li><a href="#">Xidmət 1</a></li>
-                            <li><a href="#">Xidmət 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Layihələrimiz</a></li>
-                    <li><a href="#">Qalereya</a></li>
-                    <li><a href="#">Bloqlar</a></li>
-                    <li><a href="#">Əlaqə</a></li>
-                </ul>
-            </nav>
-            <div class="navbar_right d-flex gap-4">
-                <ul>
-                    <li class="open_drop">
-                        <a href="#">Azərbaycan <img src="/img/down.png" alt="down"></a>
-                        <ul>
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">Russian</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
-                    aria-controls="offcanvasRight2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <circle cx="20" cy="20" r="20" fill="#E3FF04"></circle>
-                        <rect x="11" y="16" width="18" height="2" fill="#111111"></rect>
-                        <rect x="11" y="22" width="10" height="2" fill="#111111"></rect>
-                    </svg>
-                </button>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="/img/hersailogo.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li class="open_drop">
+                            <a href="#">Haqqımızda</a>
+                            <ul>
+                                <li><a href="#">Hədəfimiz</a></li>
+                                <li><a href="#">Vizyonumuz</a></li>
+                            </ul>
+                        </li>
+                        <li class="open_drop">
+                            <a href="#">Xidmətlər</a>
+                            <ul>
+                                <li><a href="#">Xidmət 1</a></li>
+                                <li><a href="#">Xidmət 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Layihələrimiz</a></li>
+                        <li><a href="#">Qalereya</a></li>
+                        <li><a href="#">Bloqlar</a></li>
+                        <li><a href="#">Əlaqə</a></li>
+                    </ul>
+                </nav>
+                <div class="navbar_right d-flex gap-4">
+                    <ul>
+                        <li class="open_drop">
+                            <a href="#">Azərbaycan <img src="/img/down.png" alt="down"></a>
+                            <ul>
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">Russian</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
+                        aria-controls="offcanvasRight2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="20" fill="#E3FF04"></circle>
+                            <rect x="11" y="16" width="18" height="2" fill="#111111"></rect>
+                            <rect x="11" y="22" width="10" height="2" fill="#111111"></rect>
+                        </svg>
+                    </button>
 
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2"
-                    aria-labelledby="offcanvasRightLabel2">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <img src="/img/hersailogo.png" alt="">
-                        <div class="offcanvas-infos">
-                            <div class="contact-list mb-30">
-                                <h4>Office Address</h4>
-                                <p>123/A, Miranda City Likaoli <br> Prikano, Dope</p>
-                            </div>
-                            <div class="contact-list mb-30">
-                                <h4>Əlaqə nömrəsi</h4>
-                                <p>+0989 7876 9865 9 <br> +0989 7876 9865 9</p>
-                            </div>
-                            <div class="contact-list mb-30">
-                                <h4>Email Address</h4>
-                                <p>info@hersai.com <br> info2@hersai.com</p>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2"
+                        aria-labelledby="offcanvasRightLabel2">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <img src="/img/hersailogo.png" alt="">
+                            <div class="offcanvas-infos">
+                                <div class="contact-list mb-30">
+                                    <h4>Office Address</h4>
+                                    <p>123/A, Miranda City Likaoli <br> Prikano, Dope</p>
+                                </div>
+                                <div class="contact-list mb-30">
+                                    <h4>Əlaqə nömrəsi</h4>
+                                    <p>+0989 7876 9865 9 <br> +0989 7876 9865 9</p>
+                                </div>
+                                <div class="contact-list mb-30">
+                                    <h4>Email Address</h4>
+                                    <p>info@hersai.com <br> info2@hersai.com</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -175,8 +173,8 @@
             </div>
         </div>
     </div>
-    <main id="main" class="scroll-container">
-        <section class="creative-fullpage--slider">
+    <main>
+        <section id="slider" class="creative-fullpage--slider">
             <div class="banner-horizental">
                 <div class="swiper swiper-container-h">
                     <div class="swiper-wrapper">
@@ -351,40 +349,38 @@
             </div>
         </section>
         <section class="about-section">
-            <!--Upper Row-->
-            <div class="upper-row">
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        <!--Title COl-->
-                        <div class="title-col col-lg-6 col-md-12">
-                            <div class="inner">
-                                <div class="sec-title">
-                                    <div class="upper-text">about hersai studio</div>
-                                    <h2>Reality Oriented <br>Games of 2019</h2>
-                                    <div class="lower-line now-in-view">
-                                        <span class="icon"></span>
-                                        <span class="line"></span>
-                                    </div>
-                                </div>
+            <div class="container">
+                <div class="row clearfix">
+
+                    <!--Content Column-->
+                    <div class="content-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="inner-column">
+                            <div class="sec-title">
+                                <div class="title">🚀 Biz Kimik?</div>
+                                <h2>Oyun Sadəcə Əyləncə Deyil — Bu, Sənətdir!</h2>
                             </div>
+                            <div class="text">Hersai Studio olaraq biz oyunları bir platforma kimi görürük — hissləri
+                                ifadə etmək, hekayələri danışmaq və xatirələr yaratmaq üçün. Yaratdığımız hər oyun,
+                                bizim daxili dünyamızdan bir parça daşıyır. Kodun, vizualların və səslərin ahəngində
+                                formalaşan bu dünyalarla oyunçulara yalnız əyləncə deyil, hiss yaşatmaq istəyirik.</div>
+                            <div class="email">Bizimlə əlaqə: <span class="theme_color">info@hersai.com / +994555555555</span></div>
+                            <a href="about.html" class="theme-btn btn-style-three">Daha ətraflı</a>
                         </div>
-                        <!--Text COl-->
-                        <div class="text-col col-lg-6 col-md-12">
-                            <div class="inner">
-                                <div class="text">
-                                    <p><strong>Veniam quis nostrud exercitation ullamco laboris nisut aliquipe duis aute
-                                            irure dolor in reprehenderit sed voluptate velit esse.</strong></p>
-                                    <p>Duis aute irure dolor reprehenderit in voluptate velit essle cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint ocaec at cupdatat proident sunt in culpa
-                                        qui officia deserunt mol anim id esa laborum perspiciatis omnis laorem ipsum
-                                        dolor sit ipsum amet.</p>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt labore etar dolore
-                                        magna aliqua umt enim ad minim veniam labore magna aliq Ut enim ad minim veniam,
-                                        quis nostrud exercitation.</p>
+                    </div>
+
+                    <!--Image Column-->
+                    <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="inner-column" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <img src="/img/aboutphoto.jpg" alt="">
+                                <div class="overlay-box">
+                                    <div class="year-box"><span class="number">4</span>ildir ki <br>
+                                        Fəaliyyətdəyik !</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -403,14 +399,14 @@
     <script src="https://kit.fontawesome.com/60363fc8c5.js" crossorigin="anonymous"></script>
     <script src="/js/full-page-scroll.js"></script>
     <script src="/js/script.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         new fullScroll({
             mainElement: "main",
             displayDots: false,
             animateTime: 0.7,
             animateFunction: "ease",
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
