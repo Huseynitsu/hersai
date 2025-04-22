@@ -1,9 +1,3 @@
-window.addEventListener("scroll",()=>{
-  const scrollPosition = window.scrollY
-  console.log(scrollPosition)
-})
-
-
 $(document).ready(function () {
   var swiper = new Swiper(".swiper-container-h", {
     direction: "horizontal",
@@ -23,7 +17,7 @@ $(document).ready(function () {
       onlyInViewport: true,
     },
     scrollbar: {
-      el: ".swiper-scrollbar",
+      el: ".swiper-scrollbar", 
       hide: false,
       draggable: true,
     },
