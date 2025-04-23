@@ -865,12 +865,38 @@ h2.sec_title~p {
     padding: 3rem 0;
 }
 
+.gallery_both::after {
+    content: "";
+    background: url(https://png.klev.club/uploads/posts/2024-05/png-klev-club-a4bj-p-3d-liniya-png-9.png) center / contain no-repeat;
+    left: -500px;
+    width: 121%;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.gallery_both::before {
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: -110px;
+    /* background: #0000001a; */
+    width: 562px;
+    height: 515px;
+    background: linear-gradient(141deg, rgba(0, 0, 0, 0.65) 0%, rgba(254, 73, 1, 0.36) 50%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
 .gallery_both {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 30px 40px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
 .gallery_both h2 {
@@ -880,6 +906,10 @@ h2.sec_title~p {
 
 .gallery_both span {
     font-weight: 600;
+}
+
+.gallery_left {
+    z-index: 10;
 }
 
 .gallery_left hr {
@@ -999,8 +1029,20 @@ h2.sec_title~p {
 
 .parent .div12 img {
     width: 50px;
-    object-fit: contain;   
+    object-fit: contain;
 }
+
+/* .social_medias {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social_medias img {
+    width: 30px;
+    height: 30px;
+} */
 
 /* responsiv */
 
