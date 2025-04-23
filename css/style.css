@@ -17,6 +17,13 @@ html {
     --black: #0d0d0d;
     --white: #ffffff;
     --tc-system-black-2: #181818;
+    --primary_text-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --primary_text-soft-red: hsl(14, 88%, 65%);
+    --primary_bg-soft-violet: hsl(273, 75%, 66%);
+    --primary_bg-soft-blue: hsl(240, 73%, 65%);
+    --neutral_text-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --neutral_text-dark-grayish-blue: hsl(240, 6%, 50%);
+    --dividers_light-grayish-blue: hsl(240, 5%, 91%);
 }
 
 .logo {
@@ -1032,19 +1039,204 @@ h2.sec_title~p {
     object-fit: contain;
 }
 
-/* .social_medias {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* blogs */
+
+.blogs {
+    padding: 3rem 0;
 }
 
-.social_medias img {
-    width: 30px;
-    height: 30px;
-} */
+.blogs hr {
+    border-width: 5px;
+    background: var(--tc-theme-primary);
+    color: var(--tc-theme-primary);
+    opacity: 1;
+    width: 130px;
+    animation: infinite xettanimasiya 10s;
+}
 
-/* responsiv */
+.blog_card {
+    width: 100%;
+    background: white;
+    padding: .4em;
+    border-radius: 6px;
+}
+
+.blog_card-image {
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 180px;
+    border-radius: 6px 6px 0 0;
+    transition: .5s all ease;
+}
+
+.blog_card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog_card-image:hover {
+    transform: scale(0.98);
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: var(--tc-theme-primary);
+    padding: 10px 7px 0;
+    font-family: "Montserrat";
+    font-size: 15px;
+}
+
+.category:hover {
+    cursor: pointer;
+}
+
+.heading {
+    font-weight: 600;
+    color: rgb(88, 87, 87);
+    font-size: 30px;
+    padding: 7px;
+    letter-spacing: 1px;
+    min-height: 105px;
+    display: -webkit-box;
+    line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+.heading:hover {
+    cursor: pointer;
+}
+
+.author {
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 20px;
+    font-family: "Montserrat";
+}
+
+.name {
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+
+.name:hover {
+    cursor: pointer;
+}
+
+/* blogs end */
+
+/* faq start */
+
+.suallar {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.faq {
+    display: flex;
+    background: #f8f9fa;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.faq-left img {
+    width: 100%;
+    animation: faqImg 10s infinite;
+}
+
+@keyframes faqImg {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(80px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.faq-right {
+    width: 50%;
+    padding: 40px 30px;
+}
+
+.faq-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-item * {
+    font-family: "Montserrat";
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px 0;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* faq end */
+
+/* cta */
+
+
+
+/* cta end */
+
 
 /* 1200px və aşağı ekranlar üçün */
 @media (max-width: 1401px) {

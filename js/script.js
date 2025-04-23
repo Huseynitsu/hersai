@@ -87,48 +87,59 @@ $(document).ready(function () {
       clickable: "true",
     },
   });
+
+  Fancybox.bind(".parent > div:not(.div12) img", {
+    groupAll: true,
+  });
+
+  const blogSwiper = new Swiper(".blogSwiper", {
+    spaceBetween: 15,
+    slidesPerView: 3,
+    loop: true,
+    effect: "slide",
+    pauseOnMouseEnter: false,
+    direction: "horizontal",
+    speed: 8000,
+    freeMode: true,
+    autoplay: {
+      enable: false,
+      delay: 0,
+    },
+    navigation: {
+      enable: false,
+      nextEl: ".fdb-customerSwiper-next",
+      prevEl: ".fdb-customerSwiper-prev",
+    },
+  });
+
+  $(".faq-question").click(function () {
+    const item = $(this).closest(".faq-item");
+
+    // Digər açıq sualları bağla
+    $(".faq-item")
+      .not(item)
+      .removeClass("active")
+      .find(".faq-answer")
+      .slideUp();
+
+    // Cari elementin açılıb-açılmadığını dəyiş
+    item
+      .toggleClass("active")
+      .find(".faq-answer")
+      .stop(true, true)
+      .slideToggle();
+  });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const header = document.querySelector("header");
-  const secondSection = document.querySelector(".about-section");
-  const secondHeader = document.querySelector(".second-header");
+const header = document.querySelector(".header");
+const secondHeader = document.querySelector(".second-header");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          header.classList.add("hide");
-          secondHeader.classList.add("show");
-        } else {
-          // Only remove if we're going back to first section
-          if (window.scrollY < window.innerHeight) {
-            header.classList.remove("hide");
-            secondHeader.classList.remove("show");
-          }
-        }
-      });
-    },
-    {
-      threshold: 0.1, // Trigger when 10% of section is visible
-    }
-  );
-
-  if (secondSection) {
-    observer.observe(secondSection);
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    header.classList.add("hide");
+    secondHeader.classList.add("show");
+  } else {
+    header.classList.remove("hide");
+    secondHeader.classList.remove("show");
   }
 });
-
-const elements = document.querySelectorAll(".animate-on-scroll");
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
-
-elements.forEach((el) => observer.observe(el));
