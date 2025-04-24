@@ -129,7 +129,25 @@ $(document).ready(function () {
       .stop(true, true)
       .slideToggle();
   });
+
+  // Scroll zamanı düyməni göstər/gizlət
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $("#goToTop").fadeIn();
+      $("#goToTop").css("display", "inline-flex");
+    } else {
+      $("#goToTop").fadeOut();
+    }
+  });
+
+  // Düyməyə kliklənəndə yuxarıya animasiya ilə get
+  $("#goToTop").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 0);
+    return false;
+  });
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();
 
 const header = document.querySelector(".header");
 const secondHeader = document.querySelector(".second-header");
@@ -232,6 +250,17 @@ document.addEventListener("keydown", function (e) {
 
 canvas.addEventListener("click", function () {
   if (dino.y >= 160 && gameStarted) {
-    dino.dy = -10;
+    dino.dy = -14;
   }
 });
+
+canvas.addEventListener(
+  "touchstart",
+  function (e) {
+    e.preventDefault();
+    if (dino.y >= 160 && gameStarted) {
+      dino.dy = -14;
+    }
+  },
+  { passive: false }
+);

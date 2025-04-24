@@ -26,6 +26,36 @@ html {
     --dividers_light-grayish-blue: hsl(240, 5%, 91%);
 }
 
+#goToTop {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    /* background-color: var(--tc-theme-primary); */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* box-shadow: 0 0 10px 1px #fff; */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--tc-theme-primary);
+    background-color: #fff;
+    transition: .5s all ease;
+}
+
+#goToTop:hover {
+    background-color: var(--tc-theme-primary);
+    color: #fff;
+    box-shadow: 0 0 10px 1px #fff;
+}
+
 .logo {
     width: 170px;
 }
@@ -1389,6 +1419,138 @@ canvas {
 
 /* dino oyunu end */
 
+/* footer start */
+
+.footer_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 4rem;
+}
+
+.footer_grid .footer_logo_side img {
+    width: 150px;
+}
+
+.footer_grid .footer_logo_side p {
+    font-family: "Montserrat";
+    font-size: 13px;
+    margin-top: 1rem;
+}
+
+.footer_col:not(.footer_social) ul {
+    padding: 0;
+}
+
+.footer_col:not(.footer_social) ul li a {
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: #535151;
+    transition: .4s all ease;
+}
+
+.footer_col:not(.footer_social) ul li a:hover {
+    color: var(--tc-theme-primary);
+}
+
+.social_card_footer {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+    width: 42px;
+    height: 42px;
+    background-color: var(--tc-theme-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+    background-color: #FF0000;
+    transition-duration: .3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.footer_copyright {
+    padding-top: 40px;
+}
+
+.footer_copyright p,
+.footer_copyright span,
+.footer_copyright a {
+    font-family: "Montserrat";
+    font-size: 12px;
+    color: #696666;
+    transition: .5s all ease;
+}
+
+.footer_copyright a:hover {
+    color: var(--tc-theme-primary);
+}
+
+.footer_copyright {
+    display: flex;
+    justify-content: space-between;
+}
+/* footer end */
 
 /* 1200px və aşağı ekranlar üçün */
 @media (max-width: 1401px) {
