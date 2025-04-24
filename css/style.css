@@ -1233,9 +1233,161 @@ h2.sec_title~p {
 
 /* cta */
 
+.cta_content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #000000a3;
+    z-index: 1;
+}
 
+.cta_content {
+    position: relative;
+    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/01073865290819.5d61d475f0072.jpg)center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 5rem;
+    gap: 12rem;
+}
+
+.cta_text {
+    z-index: 2;
+    position: relative;
+    width: 30%;
+}
+
+.cta_text h2 {
+    color: #fff;
+    font-size: 70px;
+}
+
+.cta_text p {
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 14px;
+}
+
+.cta_form {
+    z-index: 2;
+    width: 50%;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+.cta_form form {
+    display: flex;
+    gap: 10px;
+}
+
+.cta_form form>div.form_input {
+    width: 70%;
+}
+
+.cta_form form>div:not(.form_input) {
+    width: 30%;
+}
+
+.cta_form h2 {
+    font-size: 35px;
+}
+
+.form_input {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px 20px;
+}
+
+.form_input img {
+    object-fit: contain;
+}
+
+.form_input input {
+    background-color: rgba(248, 249, 250);
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 1rem;
+    margin-top: 10px;
+    font-size: 22px;
+    outline: none;
+}
+
+.cta_form button {
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--tc-theme-primary);
+    color: #fff;
+    border: 1px solid transparent;
+    transition: background .5s ease;
+}
+
+.cta_form button:hover {
+    border: 1px solid var(--tc-theme-primary);
+    background-color: transparent;
+}
 
 /* cta end */
+
+/* dino oyunu */
+
+.game {
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.game::after {
+    content: "";
+    position: absolute;
+    /* top: 0; */
+    bottom: -300px;
+    left: -370px;
+    width: 53%;
+    height: 100%;
+    z-index: -2;
+    background: url(https://i.pinimg.com/originals/1d/ae/0b/1dae0bf3538fd59bfa2f7c77c97cab8b.jpg) center / cover no-repeat;
+    border-radius: 50%;
+    opacity: .1;
+}
+
+.game::before {
+    content: "";
+    position: absolute;
+    /* top: 0; */
+    top: -300px;
+    right: -370px;
+    width: 53%;
+    height: 100%;
+    z-index: -2;
+    background: url(https://i.pinimg.com/originals/1d/ae/0b/1dae0bf3538fd59bfa2f7c77c97cab8b.jpg) center / cover no-repeat;
+    border-radius: 50%;
+    opacity: .1;
+}
+
+canvas {
+    background-color: #f4f4f4;
+    border: 2px solid var(--tc-theme-primary);
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.scoreboard {
+    margin-top: 10px;
+}
+
+.scoreboard p {
+    font-size: 40px;
+}
+
+/* dino oyunu end */
 
 
 /* 1200px və aşağı ekranlar üçün */
